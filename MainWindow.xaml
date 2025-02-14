@@ -34,7 +34,16 @@
                 <RowDefinition Height="60"/>
             </Grid.RowDefinitions>
 
-            <ListBox Name="MessageList" Background="White" Margin="5"/>
+            <ListBox x:Name="MessageList" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding Nickname}" Margin="5,0,10,0" FontWeight="Bold" />
+                            <TextBlock Text="{Binding Message}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
 
             <DockPanel Grid.Row="1" Margin="5">
                 <TextBox Name="MessageInput" Height="40" DockPanel.Dock="Left" Width="450" VerticalAlignment="Center" Padding="5"/>

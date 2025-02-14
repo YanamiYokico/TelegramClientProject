@@ -21,6 +21,9 @@ namespace ClientTelegram
     public partial class LoginWindow : Window
     {
         private readonly MainWindow _mainWindow;
+        public bool IsLoggedIn { get; private set; } = false;
+        public string UserName { get; private set; } = string.Empty;
+
         public LoginWindow(MainWindow mainWindow)
         {
             InitializeComponent();
@@ -43,12 +46,16 @@ namespace ClientTelegram
 
                 if (user != null)
                 {
+                    UserName = user.Name!;
+                    _mainWindow.SetUserNickname(user.Name!); 
+                    _mainWindow.InitializeClient();  
                     _mainWindow.Show();
+                    IsLoggedIn = true;
                     Close();
                 }
                 else
                 {
-                    MessageBox.Show("Such user is not found","Found error",MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show("Such user is not found", "Login Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
         }

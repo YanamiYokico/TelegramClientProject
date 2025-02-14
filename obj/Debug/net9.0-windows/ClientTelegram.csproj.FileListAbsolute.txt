@@ -145,3 +145,4 @@ C:\Users\Пользователь\source\repos\ClientTelegram\bin\Debug\net9.0-w
 C:\Users\Пользователь\source\repos\ClientTelegram\obj\Debug\net9.0-windows\ClientTelegram.csproj.AssemblyReference.cache
 C:\Users\Пользователь\source\repos\ClientTelegram\obj\Debug\net9.0-windows\ClientTe.FB1C059D.Up2Date
 C:\Users\Пользователь\source\repos\ClientTelegram\bin\Debug\net9.0-windows\BCrypt.Net-Next.dll
+C:\Users\Пользователь\source\repos\ClientTelegram\obj\Debug\net9.0-windows\ClientTelegram.sourcelink.json
