@@ -12,7 +12,7 @@ namespace ClientTelegram
         private TcpClient _client;
         private LoginWindow _loginWindow;
         public string UserNickname { get; set; } = string.Empty;
-        private string _currentChat = string.Empty; // Активный чат
+        private string _currentChat = string.Empty; 
 
         public MainWindow()
         {
