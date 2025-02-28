@@ -52,13 +52,14 @@ namespace ClientTelegram
             {
                 if (!ValidatePhone(PhoneTextBox.Text))
                 {
-                    MessageBox.Show("Invalid phone number format.Example: +380123456789", "Validation Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    MessageBox.Show("Invalid phone number format. Please use +380XXXXXXXXX.");
                     return;
                 }
 
+                // Валидация пароля
                 if (!ValidatePassword(PasswordTextBox.Password))
                 {
-                    MessageBox.Show("Password must be at least 8 characters long and include uppercase letters, lowercase letters, and digits.", "Validation Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    MessageBox.Show("Password must be at least 8 characters long, contain uppercase and lowercase letters, and at least one number.");
                     return;
                 }
                 using (var telegramContext = new TelegramContext())
@@ -101,7 +102,7 @@ namespace ClientTelegram
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка при открытии окна: {ex.Message}");
+                MessageBox.Show($"Error while opening window: {ex.Message}");
             }
         }
 

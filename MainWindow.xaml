@@ -20,8 +20,8 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Button Content="➕" Click="AddContact_Click" Grid.Column="0" HorizontalAlignment="Stretch" Height="40"/>
-                <Button Content="🚫" Click="Blacklist_Click" Grid.Column="1" HorizontalAlignment="Stretch" Height="40"/>
+                <Button Content="Create chat" Click="CreateChat_Click" Grid.Column="0" HorizontalAlignment="Stretch" Height="40"/>
+                <Button Content="Join chat" Click="JoinChat_Click" Grid.Column="1" HorizontalAlignment="Stretch" Height="40"/>
             </Grid>
 
             <ListBox Name="ChatList" Margin="5" Background="White"/>
